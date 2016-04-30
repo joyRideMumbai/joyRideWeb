@@ -43,7 +43,6 @@
 		"jquery-ui"			: "^1.11.4",
 		"slidereveal"		: "^1.1.1",
 		"materialize"		: "latest",
-		"jquery_lazyload": "https://github.com/fitajay/jquery_lazyload.git#~1.9.7",
 		
 		"owl.carousel": "^2.0.0-beta.3",
 		"font-awesome": "Font-Awesome#^4.5.0",
@@ -57,7 +56,7 @@
 		"Leaflet"					: "https://github.com/Leaflet/Leaflet.git",
 		"pikaday"					: "https://github.com/dbushell/Pikaday.git#^1.4.0",
 		"social-share-kit"			: "http://github.com/darklow/social-share-kit.git#^1.0.8",
-		"wow"					    :"https://github.com/matthieua/WOW.git",
+		"wow"					    : "https://github.com/matthieua/WOW.git",
 	},
 
 	"resolutions": {
