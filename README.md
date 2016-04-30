@@ -1,11 +1,11 @@
-# onepunch
+# joyRide Website
 
 # Prerequisits for the repository
 Node version v0.12 - Ideal version
 Ruby - 2.2.1
 
 # Install and make it running
-* cd blast
+* cd joyride
 * npm install
 * bower install
  
