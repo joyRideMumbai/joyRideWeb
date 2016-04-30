@@ -1,0 +1,71 @@
+#sidebar
+	table
+		tr
+			td
+				button#triglogin1.mui-btn.mui-btn--primary.mui-btn--flat Login
+		tr
+			td
+				button#trigcallback1.mui-btn.mui-btn--primary.mui-btn--flat Request a Callback
+				#profilelink1
+					a.mui-btn.mui-btn--small.mui-btn--primary profile
+.footer
+	.content
+		.mui-container
+			if footer != undefined
+				.mui-col-md-3.mui-col-xs-6
+					.mui--text-subhead #{footer.footer_finders.footer_block1_title}
+					ul.links
+						each foot in footer.footer_finders.footer_block1_finders
+							li
+								a(href="/#{foot.slug}") #{foot.title}
+				.mui-col-md-3.mui-col-xs-6
+					.mui--text-subhead #{footer.footer_finders.footer_block2_title}
+					ul.links
+						each foot in footer.footer_finders.footer_block2_finders
+							li
+								a(href="/#{foot.slug}") #{foot.title}
+				.mui-col-md-3.mui-col-xs-6
+					.mui--text-subhead #{footer.footer_finders.footer_block3_title}
+					ul.links
+						each foot in footer.footer_finders.footer_block3_finders
+							li
+								a(href="/#{foot.slug}") #{foot.title}
+				.mui-col-md-3.mui-col-xs-6
+					.mui--text-subhead #{footer.footer_finders.footer_block4_title}
+					ul.links
+						each foot in footer.footer_finders.footer_block4_finders
+							li
+								a(href="/#{foot.slug}") #{foot.title}
+				.mui-col-md-12.mui-col-xs-12
+					.mui--text-subhead
+						a(href="/")
+							img(src="https://b.fitn.in/global/logo.png")
+					.mui--text-body1.about Fitternity is India's largest fitness discovery and booking platform. With Fitternity users can discover new forms of fitness, experience them with trials and purchase fitness services or memberships across various fitness forms like gyms, yoga, zumba, marathon training, personal trainers, healthy meals and many more. There are over 20 categories of fitness services for users to explore, which can be accessed via a website and application on Android & iOS devices. Fitternity enables users to take free trials and experience VIP sessions at over 8,000 fitness centres and over 1000 fitness services across Mumbai, Delhi, Gurgaon, Bangalore and Pune. This unique marketplace platform also enables users to purchase sessions or memberships online with easy payment options including an EMI facility! Fitternity’s Fitness Concierge helps users with their fitness journey. Call 022-6122-2222 to speak us today!
+					br
+					//- form#newsletter(name="newsletter")
+					//- 	.mui-textfield
+					//- 		input(id="subemail",type="email",data-validetta="required,email",autocomplete="off")
+					//- 		label Enter Email Address
+					//- 	button.mui-btn.mui-btn--flat(type="submit") SUBSCRIBE TO NEWSLETTER
+	.basement.mui--align-middle
+		.mui-container
+			.mui-col-xs-12
+				ul.links
+					//- li
+						a(href="/about") About us
+					li.hiring
+						a(href="/careers") We are hiring
+					li
+						a(href="/list-your-business") Partner with us
+					li
+						a(href="/media") Media
+					li
+						a(href="/experts") Experts
+					li
+						a(href="/contact-us") Contact Us
+					li
+						a(href="/sitemap") Sitemap
+					li
+						a(href="/terms-of-use") Terms of use
+					li
+						a(href="/privacy-policy") Privacy Policy

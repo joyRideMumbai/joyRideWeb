@@ -1,0 +1,19 @@
+if vendor.info.about != ""
+	.mui-row.about.mui--z1
+		.mui-col-md-12
+			.about-content
+				.gradientback
+				.main-about-section
+					if vendor.info.about != ""
+						h4
+							span.fa.fa-info-circle
+							if type != "store"
+								span  About #{vendor.title}
+							else
+								span  Delivery details
+							p !{vendor.info.about}
+					if vendor.info.additional_info != ""
+						h4
+							span.fa.fa-info-circle
+							span  Additional Information	
+							p !{vendor.info.additional_info}

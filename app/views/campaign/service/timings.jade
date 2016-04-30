@@ -1,0 +1,64 @@
+//- if type === "gym"
+//- 	if vendor.today_closing_hour != undefined && vendor.today_closing_hour != null
+//- 		.timings
+//- 			h4
+//- 				span.fa.fa-clock-o
+//- 				span  Timings
+//- 				span#seemoretimings (See More +)
+//- 			br
+//- 			.mui-row
+//- 				.mui-col-xs-12
+//- 					span.mui--text-button opening hours
+//- 			.mui-row.item
+//- 				.mui-col-xs-3
+//- 					span.today Today
+//- 				.mui-col-xs-6.mui--text-right
+//- 					span.openat #{vendor.today_opening_hour}
+//- 					span.to to
+//- 					span.closeat #{vendor.today_closing_hour}
+//- 				.mui-col-xs-3
+//- 					.lblopen OPEN
+//- 			each schedule,index in vendor.open_close_hour_for_week
+//- 				.mui-row.allday
+//- 					.mui-col-xs-3
+//- 						span.day #{index}
+//- 					.mui-col-xs-6.mui--text-right
+//- 						span.openat #{schedule.opening_hour}	
+//- 						span.to to
+//- 						span.closeat #{schedule.closing_hour}
+//- 					.mui-col-xs-3
+//- 	else				
+//- 		if vendor.info.timing != undefined && vendor.info.timing != ""
+//- 			.timings
+//- 				h4
+//- 					span.fa.fa-clock-o
+//- 					span  Timings
+//- 				br
+//- 				.content !{vendor.info.timing}
+//- else if type === "studio"
+//- if schedules.length > 0
+	.timings
+		h4
+			span.fa.fa-clock-o
+			span  Timings
+		br
+		.mui-row.item
+			.mui-col-xs-3
+				span.today Today
+		each schedule,index in schedules
+			if index <= 2
+				.mui-row
+					.mui-col-md-12
+						span.servicename.mui--text-subhead #{schedule.name}
+						each slot in schedule.slots
+							span.slot #{slot.start_time}
+		//- .mui--text-center
+			a.mui-btn.mui-btn--small.mui-btn--primary( onclick="kyu1.pushevent('viewalltimings', {vendor : '#{vendor.slug}'})" href="/booktrial/#{vendor.slug}") View All Class Timings
+//- else
+if vendor.info.timing != undefined && vendor.info.timing != ""
+	.timings
+		h4
+			span.fa.fa-clock-o
+			span  Timings
+		br
+		.content !{service.timing}

@@ -1,0 +1,23 @@
+.featuredin
+	h4
+		span.fa.fa-certificate
+		span  Featured in
+	br
+	.mui-row.featured-item
+		.mui-col-md-12
+			a(href="#" onclick="kyu1.pushevent('vendorfeatured',{vendor : '#{vendor.slug ,value : 'newly launched'}'})").upper Newly Launched in Mumbai
+			br
+			span.fa.fa-clone
+			span.type.uppercase   selection
+	.mui-row.featured-item
+		.mui-col-md-12
+			a(href="#" onclick="kyu1.pushevent('vendorfeatured',{vendor : '#{vendor.slug ,value : 'celebrity}'})").upper Celebrity Favourites in Mumbai
+			br
+			span.fa.fa-clone
+			span.type.uppercase   selection
+	.mui-row.featured-item
+		.mui-col-md-12
+			a(href="/article/2016-nowtrending" onclick="kyu1.pushevent('vendorfeatured',{vendor : '#{vendor.slug ,value : 'trending'}'})").upper 2016: #NowTrending
+			br
+			span.fa.fa-align-left
+			span.type.uppercase   article

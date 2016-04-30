@@ -1,0 +1,324 @@
+extends layout
+block append meta
+	title #{title}
+	meta(name="description" content="#{title} ")
+	meta(name="robots" content="index,follow")
+	link(rel="canonical", href="https://www.fitternity.com/crossfit-week")
+	//- Facebook
+	meta(property="og:title" content="#{title} ")
+	meta(property="og:site_name" content="Fitternity")
+	meta(property="og:url" content="https://www.fitternity.com/crossfit-week")
+	meta(property="og:description" content="")
+	meta(property="og:image" content="")
+	//- Twitter
+	meta(property="twitter:title" content="#{title}")
+	meta(property="twitter:description" content="#{title}")
+	meta(property="twitter:site" content="@FitternityIndia")
+	meta(property="twitter:image:src" content="")
+block content
+	.crossfit-week
+		.first-section
+			.mui-container
+				.mui-row.headsection
+					.mui-col-md-3
+						.text-center.mui--visible-xs-block
+							img(src="/img/crossfit-week/logo.png", width="200")
+						.mui--hidden-xs
+							img(src="/img/crossfit-week/logo.png", width="200")
+					.mui-col-md-6
+						.text-center.mui--hidden-xs
+							h3.heading THE 
+								span.orange BEST 
+								| WAY TO 
+								.nextline DISCOVER 
+									span.orange CROSSFIT
+						.mui--visible-xs-block
+							h3.heading THE 
+								span.orange BEST 
+								| WAY TO 
+								.nextline DISCOVER 
+									span.orange CROSSFIT			
+					.mui-col-md-3.fitternity
+						.text-center.mui--visible-xs-block
+							img(src="https://a.fitn.in/global/logo.svg", width="200")
+						.mui--hidden-xs
+							img(src="https://a.fitn.in/global/logo.svg", width="200")
+				.mui-row.explain
+					.mui-col-md-5.mui--hidden-xs
+						h4 What is Crossfit?
+						p CrossFit is  high-intensity functional movements, CrossFit is a training program designed to build strength through extremely varied and challenging workouts.CrossFit  challenges the functionality of different parts of your body.It helps develop it all…Stamina…Endurance…Balance…Accuracy…Coordination… Agility…Strength…flexibility…Power & Speed.
+						h5 KNOW MORE ABOUT THE COMMUNITY
+						p CrossFitters head to "The Box" (a CrossFit affiliate gym) where they split their workout session in four parts -
+						ul
+							li 
+								b Dynamic warm up - 
+								span Functional movements, stretches & mobility that would complement the workout of that day like jumping jacks.
+							li 
+								b Skill/ strength work - 
+								span if strength day then you’ll work on strength movements; if not a strength day then you’ll try to improve your movements skills.
+							li 
+								b WOD (Workout of the day) - 
+								span this is where you’ll be told to do a certain no. of reps as quickly as possible or will have a time limit to finish the reps.
+							li 
+								b Cool down & Stretching - 
+								span Very important part which would ease your muscles after the kickass workout you did.
+
+					.mui-col-md-1
+					.mui-col-md-6
+						h4 What to expect with Crossfit FOCUS?
+						p Channel your energy, build your stamina and test your limits! Crossfit is a mix of all these three. With Crossfit Focus you can expect to get a hands on experience of what Crossfit stands for. Expect to be oriented into a program designed to help you achieve your fitness goals, train with Crossfit certified trainers at the best boxes in your city and to add on to the excitement a Crossfit starter kit with fitness goodies that are sure to keep your workout going. 
+						.offerings
+							.mui-row
+								.mui-col-md-6
+									.mui-row
+										.mui-col-md-3.mui-col-xs-2
+											img(src="/img/crossfit-week/3-day.png", width="50")
+										.mui-col-md-1.mui-col-xs-1
+										.mui-col-md-8.mui-col-xs-7
+											p Personalised 3 day induction session
+								.mui-col-md-6
+									.mui-row
+										.mui-col-md-3.mui-col-xs-2
+											img(src="/img/crossfit-week/discount.png", width="50")
+										.mui-col-md-1.mui-col-xs-1
+										.mui-col-md-8.mui-col-xs-7
+											p Lowest price gurantee on membership purchases
+							.mui-row
+								.mui-col-md-6
+									.mui-row
+										.mui-col-md-3.mui-col-xs-2
+											img(src="/img/crossfit-week/goodies.png", width="50")
+										.mui-col-md-1.mui-col-xs-1
+										.mui-col-md-8.mui-col-xs-7
+											p Fitternity Fitness Goodies
+								.mui-col-md-6
+									.mui-row
+										.mui-col-md-3.mui-col-xs-2
+											img(src="/img/crossfit-week/emi.png", width="50")
+										.mui-col-md-1.mui-col-xs-1
+										.mui-col-md-8.mui-col-xs-7
+											p EMI Options Available							
+		.second-section
+			.mui-container
+				.mui-row.headsection
+					.mui-col-md-12.text-center
+						h3 Book a slot at a Crossfit box near you
+						ul.mui-tabs__bar
+							li.mui--is-active
+								a(data-mui-toggle="tab" data-mui-controls="mumbai") Mumbai
+							li
+								a(data-mui-toggle="tab" data-mui-controls="pune") Pune
+							li
+								a(data-mui-toggle="tab" data-mui-controls="bangalore") Bangalore
+							li
+								a(data-mui-toggle="tab" data-mui-controls="delhi") Delhi
+				.mui-row
+					.mui-col-md-12				
+						.mui-tabs__pane.mui--is-active#mumbai
+							#mumbaiservices.services
+								if services['1'] != undefined
+									each service in services['1']
+										if service.finder != null
+											.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+												.mui--z2
+													a(href="/service/#{service._id}")
+														.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{service.finder.finder_coverimage}');min-height:175px;max-height:150px;background-position:100%;background-size:cover;background-repeat:no-repeat;")
+														.inner-content
+															.mui-row
+																.mui-col-xs-8
+																	h4.mui--text-header #{service.finder.title}
+																	if service.finder.average_rating > 0
+																		.reviewrate(data-rating="#{Math.ceil(service.finder.average_rating)}")
+																	.location.mui--text-caption.capitalize #{service.location.name}
+																.mui-col-xs-12.mui--text-right
+																	a.mui-btn.mui-btn--small.mui-btn--primary(href="/service/#{service._id}") Book
+								else
+									h3.text-center No offers available for this area/city										
+							.controls.mui--hidden-xs
+								.mui--pull-left
+									span.mui-btn.mui-btn--fab.mui--z1.mumbaiservices-controls.left.desktop-controls
+										i.fa.fa-chevron-left
+								.mui--pull-right
+									span.mui-btn.mui-btn--fab.mui--z1.mumbaiservices-controls.right.desktop-controls
+										i.fa.fa-chevron-right
+								.mui--clearfix
+						.mui-tabs__pane#pune
+							#puneservices.services
+								if services['2'] != undefined
+									each service in services['2']
+										if service.finder != null
+											.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+												.mui--z2
+													a(href="/service/#{service._id}")
+														.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{service.finder.finder_coverimage}');min-height:175px;max-height:150px;background-position:100%;background-size:cover;background-repeat:no-repeat;")
+														.inner-content
+															.mui-row
+																.mui-col-xs-8
+																	h4.mui--text-header #{service.finder.title}
+																	if service.finder.average_rating > 0
+																		.reviewrate(data-rating="#{Math.ceil(service.finder.average_rating)}")
+																	.location.mui--text-caption.capitalize #{service.location.name}
+																.mui-col-xs-12.mui--text-right
+																	a.mui-btn.mui-btn--small.mui-btn--primary(href="/service/#{service._id}") Book
+								else
+									h3.text-center No offers available for this area/city									
+							.controls.mui--hidden-xs
+								.mui--pull-left
+									span.mui-btn.mui-btn--fab.mui--z1.puneservices-controls.left.desktop-controls
+										i.fa.fa-chevron-left
+								.mui--pull-right
+									span.mui-btn.mui-btn--fab.mui--z1.puneservices-controls.right.desktop-controls
+										i.fa.fa-chevron-right
+								.mui--clearfix		
+						.mui-tabs__pane#bangalore
+							#bangaloreservices.services
+								if services['3'] != undefined
+									each service in services['3']
+										if service.finder != null
+											.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+												.mui--z2
+													a(href="/service/#{service._id}")
+														.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{service.finder.finder_coverimage}');min-height:175px;max-height:150px;background-position:100%;background-size:cover;background-repeat:no-repeat;")
+														.inner-content
+															.mui-row
+																.mui-col-xs-8
+																	h4.mui--text-header #{service.finder.title}
+																	if service.finder.average_rating > 0
+																		.reviewrate(data-rating="#{Math.ceil(service.finder.average_rating)}")
+																	.location.mui--text-caption.capitalize #{service.location.name}
+																.mui-col-xs-12.mui--text-right
+																	a.mui-btn.mui-btn--small.mui-btn--primary(href="/service/#{service._id}") Book
+								else
+									h3.text-center No offers available for this area/city
+							.controls.mui--hidden-xs
+								.mui--pull-left
+									span.mui-btn.mui-btn--fab.mui--z1.bangaloreservices-controls.left.desktop-controls
+										i.fa.fa-chevron-left
+								.mui--pull-right
+									span.mui-btn.mui-btn--fab.mui--z1.bangaloreservices-controls.right.desktop-controls
+										i.fa.fa-chevron-right
+								.mui--clearfix		
+						.mui-tabs__pane#delhi
+							#delhiservices.services
+								if services['4'] != undefined
+									each service in services['4']
+										if service.finder != null
+											.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+												.mui--z2
+													a(href="/service/#{service._id}")
+														.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{service.finder.finder_coverimage}');min-height:175px;max-height:150px;background-position:100%;background-size:cover;background-repeat:no-repeat;")
+														.inner-content
+															.mui-row
+																.mui-col-xs-8
+																	h4.mui--text-header #{service.finder.title}
+																	if service.finder.average_rating > 0
+																		.reviewrate(data-rating="#{Math.ceil(service.finder.average_rating)}")
+																	.location.mui--text-caption.capitalize #{service.location.name}
+																.mui-col-xs-12.mui--text-right
+																	a.mui-btn.mui-btn--small.mui-btn--primary(href="/service/#{service._id}") Book
+									each service in services['8']
+										if service.finder != null
+											.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+												.mui--z2
+													a(href="/service/#{service._id}")
+														.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{service.finder.finder_coverimage}');min-height:175px;max-height:150px;background-position:100%;background-size:cover;background-repeat:no-repeat;")
+														.inner-content
+															.mui-row
+																.mui-col-xs-8
+																	h4.mui--text-header #{service.finder.title}
+																	if service.finder.average_rating > 0
+																		.reviewrate(data-rating="#{Math.ceil(service.finder.average_rating)}")
+																	.location.mui--text-caption.capitalize #{service.location.name}
+																.mui-col-xs-12.mui--text-right
+																	a.mui-btn.mui-btn--small.mui-btn--primary(href="/service/#{service._id}") Book								
+								else
+									h3.text-center No offers available for this area/city											
+							.controls.mui--hidden-xs
+								.mui--pull-left
+									span.mui-btn.mui-btn--fab.mui--z1.delhiservices-controls.left.desktop-controls
+										i.fa.fa-chevron-left
+								.mui--pull-right
+									span.mui-btn.mui-btn--fab.mui--z1.delhiservices-controls.right.desktop-controls
+										i.fa.fa-chevron-right
+								.mui--clearfix									
+		.third-section
+			.mui-container
+				.mui-row.headsection
+					.mui-col-md-12.text-center
+						h3 Interesting reads on crossfit
+				.mui-row
+					.mui-col-md-12
+						#blogs
+							each blog in blogs
+								.mui-col-xs-12
+									.mui--z2.panel
+										.image(style="background:linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.45)), url('https://b.fitn.in/articles/covers/#{blog.coverimage}');background-position:center center;background-size:cover;background-repeat:no-repeat;height:200px;")
+										.content
+											a(href="/article/#{blog.slug}")
+												h5.mui--text-headline #{blog.title}
+											p.excerpt  !{blog.excerpt}
+											p by 
+												a(href="/author/#{blog.author.username}") #{blog.author.name}
+		.forth-section
+			.mui-container
+				.mui-row.headsection
+					.mui-col-md-12.text-center
+						h3 Famous Crossfitters
+				.mui-row.testimonial.text-center
+					#celeb
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/abraham.png")
+							h4 JOHN  
+								span.black ABRAHAM
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/gambhir.png")
+							h4 GAUTAM  
+								span.black GAMBHIR
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/kangana.png")
+							h4 KANGANA  
+								span.black RANAUT
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/khan.png")
+							h4 AAMIR   
+								span.black KHAN
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/roshan.png")
+							h4 HRITHIK  
+								span.black ROSHAN
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/singh.png")
+							h4 RANVEER   
+								span.black SINGH
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/statam.png")
+							h4 JASON   
+								span.black STATAM
+						.mui-col-md-3
+							img(src="//b.fitn.in/global/crossfit-focus/diaz.png")
+							h4 CAMERON   
+								span.black DIAZ
+		.first-section.mui--visible-xs-block
+			.mui-container
+				.mui-row.explain
+					.mui-col-md-5
+						h4 What is Crossfit?
+						p CrossFit is  high-intensity functional movements, CrossFit is a training program designed to build strength through extremely varied and challenging workouts.CrossFit  challenges the functionality of different parts of your body.It helps develop it all…Stamina…Endurance…Balance…Accuracy…Coordination… Agility…Strength…flexibility…Power & Speed.
+						h5 KNOW MORE ABOUT THE COMMUNITY
+						p CrossFitters head to "The Box" (a CrossFit affiliate gym) where they split their workout session in four parts -
+						ul
+							li 
+								b Dynamic warm up - 
+								span Functional movements, stretches & mobility that would complement the workout of that day like jumping jacks.
+							li 
+								b Skill/ strength work - 
+								span if strength day then you’ll work on strength movements; if not a strength day then you’ll try to improve your movements skills.
+							li 
+								b WOD (Workout of the day) - 
+								span this is where you’ll be told to do a certain no. of reps as quickly as possible or will have a time limit to finish the reps.
+							li 
+								b Cool down & Stretching - 
+								span Very important part which would ease your muscles after the kickass workout you did.												
+block append js
+	script(src="/js/crossfit-week.js")
+

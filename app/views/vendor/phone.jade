@@ -1,0 +1,14 @@
+if vendor.contact.phone != ""
+	.phone
+		h4
+			span.fa.fa-phone
+			span  Phone
+			if vendor.ozonetelno != null
+				p
+					span(itemref="postaladdress", itemprop="telephone") #{vendor.ozonetelno.phone_number}
+					if vendor.ozonetelno.extension != undefined
+						span.ext (Dial Extension: #{vendor.ozonetelno.extension})
+							.seperator
+			else
+				p
+					span(itemref="postaladdress", itemprop="telephone") #{vendor.contact.phone}

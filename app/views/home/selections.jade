@@ -1,0 +1,16 @@
+.selections
+	.mui--text-center
+		.fancytitle
+			.mui--text-display1 
+				.title FITTERNITY SELECTIONS
+			p Browse handpicked lists of fun and interesting fitness selections
+	.mui-container
+		.mui-row
+			each collection,index in collections
+				.mui-col-xs-12.mui-col-sm-6.mui-col-md-4.mui-col-lg-4
+					a(href="/selections/#{city}/#{collection.slug}" onclick="selectionclick('#{collection.name}', #{index})")
+						.mui-panel.image(data-original="https://b.fitn.in/c/collections/#{collection.slug}.jpg" style="background-image:linear-gradient(rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30)), url('https://b.fitn.in/empty.png');min-height:150px;height:100%;background-position:center center;background-size:cover;background-repeat:no-repeat;")
+							- var collectionname = collection.name.replace(/'/g," ");
+							.content
+								.title.mui--text-right
+									.mui--text-display1 #{collection.name}

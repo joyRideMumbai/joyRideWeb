@@ -1,0 +1,121 @@
+.featured
+	.mui-container
+		.mui-row
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.mui--text-center
+				.fancytitle
+					.mui--text-display1 
+						.title.uppercase Featured gyms in #{city}
+					P Explore the gyms available in	#{city} and find one near you with your preferences
+		.mui-row.inner-featured
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12
+				#featured-1
+					each vendor,index in popular_finders.gyms
+						.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+							.mui-panel.mui--z2
+								a(href="/#{vendor.slug}" onclick="featuredclick('#{vendor.slug}', #{index}, #{vendor._id}, 'featuredgym')")
+									.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{vendor.finder_coverimage}');min-height:175px;max-height:150px;background-position:100%;background-size:cover;background-repeat:no-repeat;")
+										.inner-content
+											.mui-row
+												.mui-col-xs-8
+													h4.mui--text-header #{vendor.title}
+													.location.mui--text-caption.capitalize #{vendor.location.name}
+												.mui-col-xs-4
+													if vendor.average_rating > 0
+														- var rating_nomenclature = ['not-rated', 'foul', 'forgettable', 'fair', 'faultless', 'fabulous'];
+														- var rateclass = rating_nomenclature[Math.ceil(vendor.average_rating)];
+														.big-rating(class="#{rateclass}") #{Math.ceil(vendor.average_rating).toFixed(1)}
+										//- .mui-row
+										//- 	.mui-col-xs-12
+										//- 		.services !{vendor.info.service}
+			.controls.mui--hidden-xs
+				.mui--pull-left
+					span.mui-btn.mui-btn--fab.mui--z1.featured-1-controls.left.desktop-controls
+						i.fa.fa-chevron-left
+				.mui--pull-right
+					span.mui-btn.mui-btn--fab.mui--z1.featured-1-controls.right.desktop-controls
+						i.fa.fa-chevron-right
+				.mui--clearfix
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.mui--text-center
+				br
+				a.mui-btn.mui--z1.view-all(href="/#{city}/gyms")
+					| View All gyms in #{city}
+	.mui-container
+		.mui-row
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.mui--text-center
+				.fancytitle
+					.mui--text-display1 
+						.title.uppercase Featured yoga classes in #{city}
+					P Explore all the Yoga classes available in #{city} and find one near you with your favourite form of Yoga
+		.mui-row.inner-featured
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12
+				#featured-2
+					each vendor,index in popular_finders.yoga
+						.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+							.mui-panel.mui--z2
+								a(href="/#{vendor.slug}" onclick="featuredclick('#{vendor.slug}', #{index}, #{vendor._id}, 'featuredyoga')")
+									.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{vendor.finder_coverimage}');min-height:175px;max-height:150px;background-position:center center;background-size:cover;background-repeat:no-repeat;")
+										.inner-content
+											.mui-row
+												.mui-col-xs-8
+													h4.mui--text-header #{vendor.title}
+													.location.mui--text-caption.capitalize #{vendor.location.name}
+												.mui-col-xs-4
+													if vendor.average_rating > 0
+														- var rating_nomenclature = ['not-rated', 'foul', 'forgettable', 'fair', 'faultless', 'fabulous'];
+														- var rateclass = rating_nomenclature[Math.ceil(vendor.average_rating)];
+														.big-rating(class="#{rateclass}") #{Math.ceil(vendor.average_rating).toFixed(1)}
+										//- .mui-row
+										//- 	.mui-col-xs-12
+										//- 		.services !{vendor.info.service}
+			.controls.mui--hidden-xs
+				.mui--pull-left
+					span.mui-btn.mui-btn--fab.mui--z1.featured-2-controls.left.desktop-controls
+						i.fa.fa-chevron-left
+				.mui--pull-right
+					span.mui-btn.mui-btn--fab.mui--z1.featured-2-controls.right.desktop-controls
+						i.fa.fa-chevron-right
+				.mui--clearfix
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.mui--text-center
+				br
+				a.mui-btn.mui--z1.view-all(href="/#{city}/yoga")
+					| View All yoga classes in #{city}
+	.mui-container
+		.mui-row
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.mui--text-center
+				.fancytitle
+					.mui--text-display1 
+						.title.uppercase Featured dance classes in #{city}
+					P Discover a dance class in #{city} near you with your favourite dance form
+		.mui-row.inner-featured
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12
+				#featured-3
+					each vendor,index in popular_finders.dance
+						.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.featured-box
+							.mui-panel.mui--z2
+								a(href="/#{vendor.slug}" onclick="featuredclick('#{vendor.slug}', #{index}, #{vendor._id}, 'featureddance')")
+									.image(style="background-image:linear-gradient(rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.90)), url('https://b.fitn.in/f/c/#{vendor.finder_coverimage}');min-height:175px;max-height:150px;background-position:center center;background-size:cover;background-repeat:no-repeat;")
+										.inner-content
+											.mui-row
+												.mui-col-xs-8
+													h4.mui--text-header #{vendor.title}
+													.location.mui--text-caption.capitalize #{vendor.location.name}
+												.mui-col-xs-4
+													if vendor.average_rating > 0
+														- var rating_nomenclature = ['not-rated', 'foul', 'forgettable', 'fair', 'faultless', 'fabulous'];
+														- var rateclass = rating_nomenclature[Math.ceil(vendor.average_rating)];
+														.big-rating(class="#{rateclass}") #{Math.ceil(vendor.average_rating).toFixed(1)}
+										//- .mui-row
+										//- 	.mui-col-xs-12
+										//- 		.services !{vendor.info.service}
+			.controls.mui--hidden-xs
+				.mui--pull-left
+					span.mui-btn.mui-btn--fab.mui--z1.featured-3-controls.left.desktop-controls
+						i.fa.fa-chevron-left
+				.mui--pull-right
+					span.mui-btn.mui-btn--fab.mui--z1.featured-3-controls.right.desktop-controls
+						i.fa.fa-chevron-right
+				.mui--clearfix
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12.mui--text-center
+				br
+				a.mui-btn.mui--z1.view-all(href="/#{city}/dance")
+					| View All dance classes in #{city}

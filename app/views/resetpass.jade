@@ -1,0 +1,21 @@
+extend layout
+block append head
+	title #{title}
+block content
+	.loading
+		#token.mui--hide(data-key='#{key}')
+		.resetpass
+			.mui-container
+				h3.heading Reset Password
+				.mui-row
+					form#reset(name="resetpassword")
+						.mui-col-md-6.mui-col-xs-12
+							.mui-textfield
+								input(type="password",id="password1",data-validetta="required,minLength[6]",autocomplete="off")
+								label New Password
+						.mui-col-md-6.mui-col-xs-12
+							.mui-textfield
+								input(type="password",id="password2",data-validetta="required,minLength[6]",autocomplete="off")
+								label Confirm Password
+						.mui--text-right
+							button.mui-btn.mui-btn--primary(type="submit") Reset

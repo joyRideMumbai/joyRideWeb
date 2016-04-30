@@ -1,0 +1,85 @@
+extends service-layout
+
+block append meta
+	title #{service.name} | Fitternity
+	meta(name="description" content="#{service.name}")
+	meta(name="robots" content="index,follow")
+	link(rel="canonical", href="https://www.fitternity.com/service/#{service._id}")
+	//- Facebook
+	meta(property="og:title" content="#{service.name}")
+	meta(property="og:site_name" content="Fitternity")
+	meta(property="og:url" content="https://www.fitternity.com/service/#{service._id}")
+	meta(property="og:description" content="#{service.name}")
+	meta(property="og:image" content="https://b.fitn.in/f/c/#{service.service_coverimage}.jpg")
+	//- Twitter
+	meta(property="twitter:title" content="#{service.name}")
+	meta(property="twitter:description" content="#{service.name}")
+	meta(property="twitter:site" content="@FitternityIndia")
+	meta(property="twitter:image:src" content="https://b.fitn.in/f/c/#{service.service_coverimage}.jpg")
+block content
+	//- Total types of pages
+	//- 1. gym
+	//- 2. studio
+	//- 3. swimming
+	//- 4. individual
+	//- 5. partner
+	//- 6. healthyfood
+	.loading
+		.vendor(data-vendor-id="#{vendor._id}")
+			.mui-container
+				include coverintro
+				include booktrial
+				.mui-row.fold2
+					.mui-col-md-4.mui-col-xs-12.sidebar
+						.mui--z1
+							include infoservices
+							include gallery
+							include timings
+					.mui-col-md-8.mui-col-xs-12.maincon
+						include offerings
+						//- include ratecard
+						include about
+						include reviews	
+			//- .mui-container
+				//- Category based cover logic
+				if (type == "gym" ||type == "studio" || type == "swimming" || type == "healthyfood")
+					include coverintro
+				else if (type == "individual" || type == "partner")
+					include intro
+				else
+					include coverintro
+				//- Booktrial logic
+				if ((type == "gym" ||type == "studio" || type == "individual") && vendor.commercial_type != 0)
+					include booktrial
+				.mui-row.fold2
+					.mui-col-md-4.mui-col-xs-12.sidebar
+						.mui--z1
+							include infoservices
+							include gallery
+							.mui--hidden-xs
+								include featuredin
+							if type != "individual" && type != "partner"
+								include phone
+								if type != "healthyfood"
+									include budget
+							else
+								include certificates
+								//- include language
+							include timings
+							.mui--hidden-xs
+								include crossell
+					.mui-col-md-8.mui-col-xs-12.maincon
+						if (type != "partner")
+							include ratecard
+						if (type == "gym" || type == "studio" || type == "individual" || type == "store")
+							include offerings
+						include about
+						include reviews
+						include definations
+					.mui-col-xs-12.mui--visible-xs-block
+						br
+						include featuredin
+						include crossell
+				include manualtrial
+block append js
+	script(src="/js/vendor.js")

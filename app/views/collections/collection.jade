@@ -1,0 +1,54 @@
+extends collections-layout
+
+block append meta
+	title #{title} | Fitternity
+	meta(name="description" content="#{title}")
+	meta(name="robots" content="index,follow")
+	//- link(rel="canonical", href="https://www.fitternity.com/articles")
+	//- Facebook
+	meta(property="og:title" content="#{title}")
+	meta(property="og:site_name" content="Fitternity")
+	//- meta(property="og:url" content="https://www.fitternity.com/articles")
+	meta(property="og:description" content="#{title}")
+	meta(property="og:image" content="")
+	//- Twitter
+	meta(property="twitter:title" content="#{title}")
+	meta(property="twitter:description" content="#{title}")
+	meta(property="twitter:site" content="@FitternityIndia")
+	meta(property="twitter:image:src" content="")
+block content
+	.collections
+		.mui-container
+			.mui-row
+				.mui-col-xs-12
+					.image.mui--text-center.mui--align-middle(style="background:linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.45)), url('https://b.fitn.in/c/collection-covers/#{info.slug}.jpg');height:350px;background-repeat:no-repeat;background-size:cover;background-position:center center;")
+						.inner-content
+							h1 #{info.name}
+			br
+			br
+			br
+			.mui-row
+				each vendor in vendors
+					.mui-col-md-4.mui-col-xs-12
+						a(href="/#{vendor.slug}")
+							.mui-panel.mui--z2
+								.image(style="background:linear-gradient(rgba(0, 0, 0, 0.05),rgba(0, 0, 0, 0.45)), url('https://b.fitn.in/f/c/#{vendor.finder_coverimage}');background-position:center center;background-size:cover;background-repeat:no-repeat;height:100px;")
+								.content
+									.mui-row
+										.mui-col-xs-10
+											if vendor.title.length > 26 
+												- var slugg = vendor.title.substring(0,23).concat('...')
+											else
+												- var slugg = vendor.title
+											h4.mui--text-title #{slugg}
+											.location.mui--text-subhead #{vendor.location.name}
+										.mui-col-xs-2
+											if vendor.average_rating > 0
+												- var rating_nomenclature = ['not-rated', 'foul', 'forgettable', 'fair', 'faultless', 'fabulous'];
+												- var rateclass = rating_nomenclature[Math.ceil(vendor.average_rating)];
+												.big-rating(class="#{rateclass}") #{Math.ceil(vendor.average_rating).toFixed(1)}
+									.mui-row
+										.mui-col-xs-12
+											.services !{vendor.info.service}
+
+

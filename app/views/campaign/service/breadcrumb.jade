@@ -1,0 +1,9 @@
+.breadcrumb
+	.mui-container
+		.mui-row
+			.mui-col-xs-12
+				if vendor !== undefined
+					span 
+						a(href="/") Home 
+						span / 
+						a.capitalize(href="/#{vendor.city.slug}/#{vendor.category.slug}/all/all/all/all") #{vendor.category.name}

@@ -1,0 +1,99 @@
+extends profile-layout
+
+block append head
+    //title #{vendor.meta.title} | Fitternity
+    //meta(name="description" content="#{vendor.meta.description}")
+    //meta(name="robots" content="index,follow")
+    //link(rel="canonical", href="https://www.fitternity.com/#{vendor.slug}")
+block content
+    .loading
+        .profile
+            .mui-container
+                .mui-row
+                    .mui-col-md-3
+                        .profileimg
+                            //- span.con
+                                span.icon.icon-write
+                        .ul#menu
+                            li.viewprofile
+                                span.icon.icon-signin
+                                span My Profile
+                            li.viewtrials
+                                span.icon.icon-searchlist
+                                span My Trials
+                            li.viewreviews
+                                span.icon.icon-reviews
+                                span My Reviews
+                            li.viewmemberships
+                                span.icon.icon-rupee
+                                span My Memberships
+                            li.logout#dologout
+                                span.icon.icon-signout
+                                span Logout
+                    .mui-col-md-6.sections
+                        .editprofile.contentblocks
+                            h2 My Profile
+                            form#myprofile(name="myprofile")
+                                legend Enter Profile Information
+                                .mui-row
+                                    .mui-col-md-6
+                                        .mui-textfield
+                                            input#fullname(type="text",name="fullname",data-validetta="required,minLength[5]",autocomplete="off")
+                                            label Full Name
+                                    .mui-col-md-6
+                                        .mui-textfield
+                                            input#email(type="email",name="email",data-validetta="required,email",autocomplete="off")
+                                            label Email
+                                .mui-row
+                                    .mui-col-md-6
+                                        .mui-textfield
+                                            input#mobile(type="text",name="mobile",data-validetta="required,number,minLength[10],maxLength[12]",autocomplete="off")
+                                            label Mobile
+                                    .mui-col-md-6
+                                        .mui-textfield
+                                            input#location(type="text",name="location")
+                                            label Location
+                                .mui-row
+                                    .mui-col-md-6
+                                        .mui-textfield
+                                            input#addline1(type="text",name="addline1",data-validetta="required",autocomplete="on")
+                                            label Address Line 1
+                                    .mui-col-md-6
+                                        .mui-textfield
+                                            input#addline2(type="text",name="addline2",data-validetta="required",autocomplete="on")
+                                            label Address Line 2
+                                .mui-row
+                                    .mui-col-md-8
+                                        .mui-textfield
+                                            input#addline3(type="text",name="addline3",data-validetta="required",autocomplete="on")
+                                            label Address Line 3
+                                    //- .mui-col-md-4
+                                        .mui-textfield
+                                            input#pincode(type="text",name="pincode",data-validetta="required",autocomplete="on")
+                                            label Pincode
+                                .mui-row
+                                    .mui-col-md-12.mui--text-center
+                                        button.mui-btn.mui-btn--primary(type="submit") Update Information
+                        .trials.contentblocks
+                            h2 My Trials
+                            #alltrials
+                                h4.upcomingheading Upcoming Trials
+                                #upcomingtrials
+                                h4.pastheading Past Trials
+                                #pasttrials
+                        .reviews.contentblocks
+                            h2 My Reviews
+                            #myreviews
+                        .memberships.contentblocks
+                            h2 My Memberships
+                            #mymemberships
+                    .mui-col-md-1
+                    .mui-col-md-3
+                        .recent.mui--z3#recentlyviewprofile
+                            h3 Recently Viewed
+                            ul#recentviewedprofilelinks                               
+                        .recent.mui--z3#recentlysearched
+                            h3 Recent Searches
+                            ul#recentsearchlinks                                
+block append js
+    script(src="/js/profile.js")

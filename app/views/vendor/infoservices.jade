@@ -1,0 +1,13 @@
+.infoservices
+	h4 
+		span.fa.fa-inr
+		if type == "individual"
+			span  Offerings with 
+				span #{vendor.title}
+		else if type == "store"
+			span  Brands available at 
+				span #{vendor.title}
+		else		
+			span  Offerings at 
+				span #{vendor.title}
+	.service !{vendor.info.service}

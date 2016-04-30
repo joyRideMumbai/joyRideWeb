@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+	head
+		block meta
+		include ../sections/header
+	body
+		include ../sections/topbar
+		include breadcrumb
+		block content
+		include ../sections/authpops
+		include ../sections/callback
+		include ../sections/generateotp
+		include ../sections/footer
+	include ../libs/jslibs

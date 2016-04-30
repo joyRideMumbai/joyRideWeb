@@ -1,0 +1,281 @@
+extends layout
+
+block append meta
+	title Fitternity in Payment | Fitternity
+	if type == "auto"
+		script.
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+				n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+				document,'script','https://connect.facebook.net/en_US/fbevents.js');
+
+				fbq('init', '404816376348744');
+				fbq('trackCustom', 'Auto Book trial');
+		noscript.
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=404816376348744&ev=PageView&noscript=1"/>
+	else
+		script.
+			!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+				n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+				n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+				t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+				document,'script','https://connect.facebook.net/en_US/fbevents.js');
+				fbq('init', '404816376348744');
+				fbq('trackCustom', 'Manual trial lead');
+		noscript.
+			<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=404816376348744&ev=PageView&noscript=1"/>
+	meta(name="description" content="Fitternity on payment-success")
+	link(rel="canonical", href="https://www.fitternity.com/paymentsuccess")
+block content
+	div.successpages(itemscope itemtype="http://schema.org/CheckoutPage")
+		.mui-container
+			.success
+				.mui-row.text-center
+					img(src="/img/vector-graphics/tick.png", width="50")
+					h3 Session purchase successful
+			.iconspart.text-center.mui--hidden-xs
+				.mui-row
+					.mui-col-md-1
+						img(src="/img/vector-graphics/step-1.png", width="80")
+						p You are here
+					.mui-col-md-1
+						img(src="/img/vector-graphics/arrow.png", width="80")
+					.mui-col-md-1
+						img(src="/img/vector-graphics/reminder.png", width="80")
+						p Details shared on subscription code, what to carry and what to expect
+					.mui-col-md-1
+						img(src="/img/vector-graphics/arrow.png", width="80")
+					.mui-col-md-1
+						img(src="/img/vector-graphics/flash.png", width="80")
+						p Flash the code at the gym/studio
+					.mui-col-md-1
+						img(src="/img/vector-graphics/arrow.png", width="80")
+					.mui-col-md-1
+						img(src="/img/vector-graphics/step-3.png", width="80")
+						p You attend the workout session
+					.mui-col-md-1
+						img(src="/img/vector-graphics/arrow.png", width="80")
+					.mui-col-md-1
+						img(src="/img/vector-graphics/step-6.png", width="80")
+						p Get exclusive discounts from Fitternity
+					.mui-col-md-1
+						img(src="/img/vector-graphics/arrow.png", width="80")
+					.mui-col-md-1
+						img(src="/img/vector-graphics/step-7.png", width="80")
+						p Kickstart your fitness journey
+			.infopart
+				.mui-row.mainrow
+					.mui-col-md-4
+						.mui-row
+							.mui-col-md-2.mui-col-xs-2
+								img(src="/img/trial-success/destination.png", width="30")
+							.mui-col-md-10.mui-col-xs-8
+								b Fitness Destination
+								br
+						.mui-row
+							.mui-col-md-10.mui-col-md-offset-2.mui-col-xs-10.mui-col-xs-offset-2
+								span #{order.finder_name}
+									
+					.mui-col-md-4
+						.mui-row
+							.mui-col-md-2.mui-col-xs-2
+								img(src="/img/trial-success/location.png", width="30")
+							.mui-col-md-10.mui-col-xs-8
+								b Address
+								br
+						.mui-row
+							.mui-col-md-10.mui-col-md-offset-2.mui-col-xs-10.mui-col-xs-offset-2
+								span !{order.finder_address}
+					.mui-col-md-4
+						.mui-row
+							.mui-col-md-2.mui-col-xs-2
+								img(src="/img/trial-success/membership-details.png", width="30")
+							.mui-col-md-10.mui-col-xs-8
+								b Staring Date & Slot
+								br
+						.mui-row
+							.mui-col-md-10.mui-col-md-offset-2.mui-col-xs-10.mui-col-xs-offset-2
+								span #{order.schedule_date} 
+								br
+								span #{order.schedule_slot}
+					if order.preferred_start_date != undefined
+						.mui-col-md-4
+							.mui-row
+								.mui-col-md-2.mui-col-xs-2
+									img(src="/img/trial-success/starting-date.png")
+								.mui-col-md-10		
+									b Preferred Start Date
+									br
+							.mui-row
+								.mui-col-md-10.mui-col-md-offset-2.mui-col-xs-10.mui-col-xs-offset-2
+									span #{order.preferred_start_date}
+				.mui-row.mainrow			
+					.mui-col-md-4
+						.mui-row
+							.mui-col-md-2.mui-col-xs-2
+								img(src="/img/trial-success/membership-details.png", width="30")
+							.mui-col-md-10.mui-col-xs-8
+								b Trial For
+								br
+						.mui-row
+							.mui-col-md-10.mui-col-md-offset-2.mui-col-xs-10.mui-col-xs-offset-2
+								span #{order.service_name}
+					.mui-col-md-4
+						.mui-row
+							.mui-col-md-2.mui-col-xs-2
+								img(src="/img/trial-success/amount.png", width="30")
+							.mui-col-md-10.mui-col-xs-8
+								b Amount Paid
+								br
+						.mui-row
+							.mui-col-md-10.mui-col-md-offset-2.mui-col-xs-10.mui-col-xs-offset-2
+								span #{order.amount}
+			.note
+				h4 Note
+				ul
+					li We will be sharing an email and SMS with all the details mentioned above 
+					li Please flash the subscription ID at the gym / studio to access your trial session
+					li Our team will reach out to you post the trial to understand your feedback and help you purchase the membership at a discount
+					li In case of any queries - email us on 
+						span.imp support@fitternity.com
+						span or call us on 
+						span.imp 02261222233
+		include ../home/selections								
+
+//- 		div.othercollection(layout="row", layout-sm="column",layout-padding)
+//- 			.homecollection(flex)
+//- 				h2 Explore our curated 
+//- 					span fitness options
+//- 				div(layout="row", layout-wrap)
+//- 					each collection in collectionsets
+//- 						div(flex="33",flex-sm="100")
+//- 							md-card
+//- 								a(href="/selections/#{city}/#{collection.slug}")
+//- 									.image(style="background:linear-gradient(rgba(0, 0, 0, 0.30),rgba(0, 0, 0, 0.30)), url('https://b.fitn.in/c/collections/#{collection.slug}.jpg');height:120px;background-position:center center;background-size:cover;background-repeat:no-repeat;")
+//- 										p #{collection.name}
+//- 	//- div.paymentpage(layout="row", layout-align="top center", itemscope itemtype="http://schema.org/CheckoutPage", layout-fill)
+//- 		div(flex="10", hide-sm)
+//- 		div(flex="80", flex-sm="100")
+//- 			div.splash.animated.bounceInDown(ng-cloak="")
+//- 				h1.text-center Payment is in Progress
+//- 				div(layout="row" layout-align="space-around" )
+//- 					md-progress-linear(md-mode="indeterminate")
+				
+//- 			.paymentstatus
+//- 				if response.status == 'success'
+//- 					div.dotted(layout="column", layout-padding)
+//- 						div(flex="25")
+//- 						div(layout-gt-sm="row",layout-sm="column", layout-padding, layout-align-sm="center center", layout-align-gt-sm="start start", layout-fill)
+//- 							div.text-center(flex="25", flex-sm="20")
+//- 								img(src="https://b.fitn.in/global/tick1.png", alt="success", width="100")
+//- 							div(flex="70", flex-sm="80")
+//- 								h1
+//- 									strong Thank you for purchasing your membership. Your subscription is confirmed.
+//- 						div(layout="row", layout-padding)
+//- 							h3 Here are details you have enquired about : 
+//- 						div.details(layout="row",layout-wrap)
+//- 							div(layout="column", layout-padding, flex,flex-sm="100",flex-md="50")
+//- 								h4 Fitness Destination : 
+//- 								p #{booktrialdetail.finder}
+//- 							if booktrialdetail.category != 42 && booktrialdetail.category != 45
+//- 								div(layout="column", layout-padding, flex,flex-sm="100",flex-md="50")
+//- 									h4 Address : 
+//- 									!{booktrialdetail.address}
+//- 							div(layout="column", layout-padding, flex,flex-sm="100",flex-md="50")
+//- 								h4 Membership details : 
+//- 								p #{booktrialdetail.membership}
+//- 							div(layout="column", layout-padding, flex,flex-sm="100",flex-md="50")
+//- 								h4 Amount Paid
+//- 								p #{response.amount}
+//- 						div(layout-gt-sm="row", layout-sm="column") 
+//- 							strong Note 
+//- 							ul
+//- 								li You will receive an email and SMS from Fitternity with the subscription code 
+//- 								li Fitternity team will be reaching out to you to confirm the session 
+//- 								li Please flash the subscription code at the gym/studio and attend your workout session
+//- 							div(flex="25")
+//- 				else
+//- 					div.text-center(layout="column", ng-controller="payment-loading", ng-cloak="")
+//- 						.animated.fadeIn(layout="row", layout-padding)
+//- 							div(flex="25")
+//- 							div(flex="50")
+//- 								img(src="/img/cross.png", alt="", style="width:20%;")
+//- 								span
+//- 									h1(style="color:red")
+//- 										strong Payment Failure!!!!
+//- 								p In case of any queries reach out to us on 
+//- 									strong +91 9222221131
+//- 								md-button.md-raised.md-primary(href="/",style="margin-bottom:50px;") Go Back To Homepage
+//- 							div(flex="25")				
+//- 								div(layout="column",layout-sm="column",layout-padding,layout-align="center center")
+//- 						//- md-content
+//- 						//- 	h2.mg-title EXPLORE FITNESS OPTIONS IN YOUR CITY
+//- 	div(flex="10", hide-sm, hide-md)
+//- //- block append payment-js
+//- 	script(defer).
+//- 		$(function(){
+//- 			$('.splash').show();
+//- 			$('.paymentstatus').hide();
+//- 			status="#{response.status}";
+//- 			if(status == 'success'){
+//- 				setTimeout(submitform,4000)
+//- 			}
+//- 			else{
+//- 				$('.paymentstatus').show();
+//- 				$('.splash').hide();
+//- 			}
+//- 		})
+//- 		function submitform(){
+//- 			var customer = {
+//- 				"order_id" : $('#customerdetails').find('input[name="orderid"]').val(),
+//- 				"status" : $('#customerdetails').find('input[name="status"]').val(),
+//- 				"customer_name" : $('#customerdetails').find('input[name="firstname"]').val(),
+//- 				"customer_email" : $('#customerdetails').find('input[name="email"]').val(),
+//- 				"customer_phone" : $('#customerdetails').find('input[name="phone"]').val(),
+//- 				"error_Message" : $('#customerdetails').find('input[name="error_Message"]').val(),
+//- 				"finder_id" : $('#customerdetails').find('input[name="udf4"]').val(),
+//- 				"service_name" : $('#customerdetails').find('input[name="productinfo"]').val(),
+//- 				"amount":$('#customerdetails').find('input[name="amount"]').val()
+//- 			};
+//- 			console.log(customer);
+//- 			$.post('https://a1.fitternity.com/capturepayment', JSON.stringify(customer)).success(function(response) {
+//- 				//- alert(response);
+//- 				console.log(response);
+//- 				$('.paymentstatus').show();
+//- 				$('.splash').hide();
+//- 				wizrocket.event.push("Charged",{
+//- 						"Amount": customer.amount,
+//- 						"Currency": "Rupee",
+//- 						"Payment mode": "Online",
+//- 						"Customer Name": customer.customer_name,
+//- 						"Orderid": customer.order_id,
+//- 						"Service Name": customer.service_name,
+//- 						"Type":'membership'
+//- 						})
+//- 				kyu1.pushevent('paymentsuccess', {amount : customer.amount, 
+//- 								orderid : customer.order_id,
+//- 								service : customer.service_name,
+//- 								email : customer.customer_email,
+//- 								status : customer.status,
+//- 								type : 'membership',
+//- 								customername : customer.customer_name,
+//- 								paymentmode : 'online',
+//- 								finder_id : customer.finder_id								
+//- 								});
+//- 			});
+//- 		}
+//- 	script(type="text/javascript").
+//- 		/* <![CDATA[ */
+//- 		var google_conversion_id = 946287096;
+//- 		var google_conversion_language = "en";
+//- 		var google_conversion_format = "3";
+//- 		var google_conversion_color = "ffffff";
+//- 		var google_conversion_label = "vI81CNPK4GMQ-OOcwwM";
+//- 		var google_remarketing_only = false;
+//- 		/* ]]> */
+//- 	script(type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js")
+//- 	noscript.
+//- 		<div style="display:inline;">
+//- 			<img height="1" width="1" style="border-style:none;" alt="" src="//www.googleadservices.com/pagead/conversion/946287096/?label=vI81CNPK4GMQ-OOcwwM&amp;guid=ON&amp;script=0"/>
+//- 		</div>

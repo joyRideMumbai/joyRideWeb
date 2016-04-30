@@ -1,0 +1,14 @@
+doctype html
+html(lang='en')
+	head
+		include ../sections/header
+		block meta
+			link(rel='stylesheet',type='text/css',href='css/static.css')
+	body
+		include ../sections/topbar
+		block content
+		include ../sections/authpops
+		include ../sections/callback
+		include ../libs/jslibs
+		include ../sections/footer
+		script(src="/js/static.js")

@@ -1,0 +1,29 @@
+if type != "healthyfood" && type != "store"
+	.crossell
+		if vendor.category.name == "gyms"
+			h4
+				span.icon.icon-nearby 
+				span.capitalized #{vendor.category.name} nearby
+		else
+			h4
+				span.icon.icon-nearby 
+				span.capitalized #{vendor.category.name} options nearby
+		each vendor in nearby_same
+			.mui-row.related-item
+				.mui-col-md-12
+					a(href="/#{vendor.slug}" onclick="kyu1.pushevent('crossellvendorpage',{vendor_slug : '#{vendor.slug}', crossedto : '#{vendor.slug}'})").upper #{vendor.title}
+					br
+					span.icon.icon-geo
+					span.capitalize #{vendor.location.name}, #{vendor.city.name}
+if type != "healthyfood" && type != "store"
+	.crossell
+		h4
+			span.icon.icon-nearby 
+			span.capitalized More fitness options nearby
+		each vendor in nearby_other
+			.mui-row.related-item
+				.mui-col-md-12
+					a(href="/#{vendor.slug}" onclick="kyu1.pushevent('crossellvendorpage',{vendor_slug : '#{vendor.slug}', crossedto : '#{vendor.slug}'})").upper #{vendor.title}
+					br
+					span.icon.icon-geo
+					span.capitalize #{vendor.location.name}, #{vendor.city.name}

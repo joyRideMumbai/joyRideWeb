@@ -1,0 +1,38 @@
+if vendor.services.length > 0
+	.mui-row.memberships.mui--z1
+		.mui-col-md-12
+			h4
+				if type != "healthyfood"
+					span.fa.fa-users
+					span  Memberships
+				else
+					span.fa.fa-spoon
+					span  Packages
+			p.subtext 
+				strong Why buy through Fitternity?
+				span  Get insider discounts, offers and easy payment options (Net-banking, Credit Card, EMI and wallet)
+			br
+			.ratecard(data-accordion-group)
+				each service, index in vendor.services
+					.accordion(data-accordion)
+						.heading(data-control data-card-title="#{service.name}")
+							span.index #{index+1} 
+							span.title #{service.name}
+						.content(data-content)
+							each ratecard, rateindex in service.serviceratecard
+								if rateindex == 1
+									.mui-row.rate-item
+										.mui-col-md-10.mui-col-xs-8
+											.mui-row
+												.mui-col-md-8.mui-col-xs-12.dur
+													span.duration 3 day Pass
+												.mui-col-md-4.mui-col-xs-12.pri
+														span(itemprop="price",id="offer") 299
+										.mui-col-md-2.mui-col-xs-4.buy.mui--text-right
+											a.mui-btn.mui-btn--small.mui-btn--primary(href="/crossfit-focus/buy/#{service._id}") buy
+				br
+				if vendor.commercial_type == 0
+					.mui-row
+						.mui-col-md-12
+							.mui--text-subhead Note:
+							p This rates are indicative and are subject to change. Please call the outlet directly to find our latest rates.

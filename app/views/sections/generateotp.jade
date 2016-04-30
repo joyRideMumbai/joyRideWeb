@@ -1,0 +1,20 @@
+#generateotp-modal.lean-popup.mfp-hide
+    .mui-row
+        .mui-col-md-12
+            .text-center
+                h4.mui--text-headline Enter the verification code
+                p.verification-note We have sent you a SMS with the verification code
+            br
+            #otpform
+                .mui-row
+                    .mui-col-xs-12
+                        .mui-textfield
+                            input(type="text",id="otp",autocomplete="off")
+                            label Verification code
+                        small.message Please enter valid verification code  
+                    .mui-col-xs-12.mui--text-center
+                        span.regenerate Resend verification code 
+                        span.sms-loading(class='fa fa-spinner fa-pulse fa-3x fa-fw margin-bottom hide')
+                    .mui-col-xs-12.mui--text-right
+                        button#verifyotp.mui-btn.mui-btn--small.mui-btn--primary Confirm
+                        button#proceed-without-otp.mui-btn.mui-btn--small.mui-btn--primary PROCEED WITHOUT OTP

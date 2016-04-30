@@ -1,0 +1,6 @@
+.definations.mui-row.mui--z1
+	each defination in definations.categorytags
+		.def
+			.category 
+				h4 #{defination.slug.replace(/-/g," ")}
+			.define #{defination.defination}

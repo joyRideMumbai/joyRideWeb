@@ -1,0 +1,47 @@
+div#filterdrawer.sec-padtb.mui--hidden-md.mui--hidden-lg.flow-hidden  
+	.mui-container
+		.mui-row
+			.mui-col-sm-6.mui-col-xs-6
+				button.mui-btn.mui-btn--flat#filterdrawer-toggle
+					i.fa.fa-arrow-left
+					| &nbsp; &nbsp; Filters
+			.mui-col-sm-3.mui-col-xs-3.mui--text-right.no-pad
+				button.mui-btn.mui-btn--flat.mui-btn--small.btn-orange Apply
+			.mui-col-sm-3.mui-col-xs-3.no-pad
+				button.mui-btn.mui-btn--flat.mui-btn--small.btn-outline-orange Reset
+		div.mui-divider
+		.mui-row#mobileFilterSection
+			.mui-col-sm-3.mui-col-xs-3.no-pad
+				ul.mui-list--unstyled#filtersTab
+					li.mui--text-center.active.mui--is-active
+						a.noline(data-mui-toggle="tab" data-mui-controls="pane-1")
+							span.icon.icon-spinning-and-indoor-cycling
+							p.text Categories
+					li.mui--text-center
+						a.noline(data-mui-toggle="tab" data-mui-controls="pane-2")
+							span.icon.icon-map
+							p.text Locations
+					li.mui--text-center
+						a.noline(data-mui-toggle="tab" data-mui-controls="pane-3")
+							span.icon.icon-locations
+							p.text Special
+					li.mui--text-center
+						a.noline(data-mui-toggle="tab" data-mui-controls="pane-4")
+							span.icon.icon-fitness-studios
+							p.text Amenities
+					li.mui--text-center
+						a.noline(data-mui-toggle="tab" data-mui-controls="pane-5")
+							span.icon.icon-money
+							p.text Budget
+			.mui-col-sm-9.mui-col-xs-9.no-pad
+				#filtersWorkSec
+					div#pane-1.mui-tabs__pane.mui--is-active
+						ul.mobilebox.categories.mui-list--unstyled
+					div#pane-2.mui-tabs__pane
+						ul.mobilebox.locations.mui-list--unstyled
+					div#pane-3.mui-tabs__pane
+						ul.mobilebox.filters.mui-list--unstyled
+					div#pane-4.mui-tabs__pane
+						ul.mobilebox.amenities.mui-list--unstyled
+					div#pane-5.mui-tabs__pane
+						ul.mobilebox.budget.mui-list--unstyled

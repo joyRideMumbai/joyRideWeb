@@ -1,0 +1,56 @@
+.mui-row
+	.mui-col-md-12.cover.mui--z1(style="background:linear-gradient(rgba(0,0,0,0.65),rgba(0,0,0,0.65)), url(https://b.fitn.in/f/c/#{vendor.coverimage});background-repeat:no-repeat;background-size:cover;")
+		.top
+			.mui-row
+				.mui-col-md-10.mui-col-xs-12
+					h1.capitalized #{vendor.title}
+					//- .services !{vendor.info.service}
+					//- if type == "store"
+					//- 	.mui-col-md-12.subofferings
+					//- 		each offering in vendor.offerings
+					//- 			.offering
+					//- 				span.fa.fa-check
+					//- 				span.tag #{offering.name}
+				.mui-col-md-2.mui-col-xs-12.rating-con.mui--hidden-xs
+					if vendor.reviews.length > 0
+						.mui-row
+							.mui-col-md-12.mui-col-xs-4
+								#writereviewtrig
+									span Write a Review
+							.mui-col-md-12.mui-col-xs-4
+								if vendor.average_rating > 0
+									- var rating_nomenclature = ['not-rated', 'foul', 'forgettable', 'fair', 'faultless', 'fabulous'];
+									- var rateclass = rating_nomenclature[Math.ceil(vendor.average_rating)];
+									.big-rating(class="#{rateclass}") #{Math.ceil(vendor.average_rating).toFixed(1)}									
+							.mui-col-md-12.mui-col-xs-4
+								span.count #{vendor.reviews.length} Reviews
+					else
+						#writereviewtrig Be the first one to review
+					//- .mainrating(data-rating="#{vendor.average_rating}")
+				//- .mui-col-xs-12.mui--visible-xs-block.mobile-rating-con
+					.mui-row
+						if vendor.average_rating > 0
+							.mui-col-xs-3
+								- var rating_nomenclature = ['not-rated', 'foul', 'forgettable', 'fair', 'faultless', 'fabulous'];
+								- var rateclass = rating_nomenclature[Math.ceil(vendor.average_rating)];
+								.big-rating(class="#{rateclass}") #{Math.ceil(vendor.average_rating).toFixed(1)}
+						.mui-col-xs-9
+							if vendor.average_rating > 0
+								span.count #{vendor.reviews.length} Reviews
+								br
+							#writereviewtrig
+								span Write a Review
+		.bottom
+			.mui-row.info
+				.mui-col-md-6.mui-col-xs-12.info-step
+					h4
+						span.fa.fa-map-marker
+						if type != "healthyfood"
+							span  Address
+						else
+							span  Delivery Address
+					- var StrippedString = vendor.contact.address.replace(/(<([^>]+)>)/ig," ").replace(/&nbsp;/gi,' ');
+					.address #{StrippedString}
+					if type != "healthyfood"
+						a.viewmap(href="https://maps.google.com/maps?q=#{vendor.lat},#{vendor.lon}&ll=#{vendor.lat},#{vendor.lon}&z=17", target="_blank") View Map &nbsp;
+								span.fa.fa-map

@@ -6,14 +6,14 @@ require('newrelic');
 var express       = require('express'),
 	cors          = require('cors'),
 	redirect      = require("express-redirect"),
-	config        = require('./config/config'),
 	xFrameOptions = require('x-frame-options'),
-	request       = require('request');
+	request       = require('request'),
 	cookieParser  = require('cookie-parser'),
-	helper        = require('./helpers.js'),
-	uuid          = require('node-uuid')
-	chalk         = require('chalk')
-	geoip2ws      = require('geoip2ws')('107924', 'WQCNsxQLxyPU');
+	uuid          = require('node-uuid'),
+	chalk         = require('chalk'),
+	geoip2ws      = require('geoip2ws')('107924', 'WQCNsxQLxyPU'),
+	config        = require('./config/config'),
+	helper        = require('./helpers.js');
 
 // Initializing Express App
 var app = express();

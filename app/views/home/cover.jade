@@ -1,0 +1,127 @@
+.home-cover(style='background: linear-gradient(rgba(0,0,0,0.5),transparent), url(https://cdn.fitn.in/bg/home.jpg);background-position: 92% 15%; background-size: cover;')
+	.mui-container
+		.mui-row
+			.mui-col-xs-12.mui-col-sm-12.mui-col-md-12.mui-col-lg-12
+				.tagline.mui--text-center
+					h1 ACCOMPLISH YOUR FITNESS GOALS
+					h2.capitalize Discover, Try & Book Fitness Services in #{city}
+		br
+		.mui-row.sectionsearch
+			.mui-col-md-8.mui-col-md-offset-2.mui-col-xs-12
+				.mui-row
+					.mui-col-md-5.mui-col-xs-12
+						select#loc.selectized.disNone
+					.mui-col-md-5.mui-col-xs-12
+						select#cat.selectized.disNone
+					.mui-col-md-2.mui-col-xs-12.mui--align-top
+						a.mui-btn.mui-btn--raised.mui-btn--primary#search-btn(onclick="")
+							i.fa.fa-search
+							|  Search
+		.mui-row.quicklinks
+			.mui-col-md-8.mui-col-md-offset-2
+				if city == 'mumbai'
+					ul
+						li
+							a(href = "/mumbai/gyms" onclick = "categorySearch('gyms')") Gyms
+						li
+							a(href = "/mumbai/yoga"  onclick = "categorySearch('yoga')") Yoga
+						li
+							a(href = "/mumbai/zumba"  onclick = "categorySearch('zumba')") Zumba
+						li
+							a(href = "/mumbai/fitness-studios"  onclick = "categorySearch('fitness studios')") Fitness Studios
+						li
+							a(href = "/mumbai/crossfit"  onclick = "categorySearch('crossfit')") Crossfit
+						li
+							a(href = "/mumbai/pilates"  onclick = "categorySearch('pilates')") Pilates
+						li
+							a(href = "/mumbai/healthy-tiffins"  onclick = "categorySearch('healthy tiffins')") Healthy Tiffins
+						li
+							a(href = "/mumbai/cross-functional-training"  onclick = "categorySearch('cross functional training')") Cross/Functional Training
+						li
+							a(href = "/mumbai/mma-and-kick-boxing"  onclick = "categorySearch('mma & kick  boxing')") MMA & Kick Boxing								
+						li
+							a(href = "/mumbai/dance"  onclick = "categorySearch('dance')") Dance
+						li
+							a(href = "/mumbai/marathon-training"  onclick = "categorySearch('marathon training')") Marathon Training
+						li
+							a(href = "/mumbai/spinning-and-indoor-cycling"  onclick = "categorySearch('spinning')") Spinning
+						li
+							a(href = "/mumbai/personal-trainers"  onclick = "categorySearch('personal trainers')") Personal Trainers 
+						li
+							a(href = "/mumbai/healthy-snacks-and-beverages"  onclick = "categorySearch('healthy snacks & beverages')") Healthy Snacks & Beverages
+						li
+							a(href = "/mumbai/dietitians-and-nutritionists"  onclick = "categorySearch('dietitians and nutritionists')") Dietitians & Nutritionists
+						li
+							a(href = "/mumbai/swimming"  onclick = "categorySearch('swimming')") Swimming
+						li
+							a(href = "/mumbai/sport-nutrition-supliment-stores"  onclick = "categorySearch('nutrition stores')") Nutrition Stores	
+				if city == 'pune'
+					ul
+						li
+							a(href = "/pune/gyms"  onclick = "categorySearch('gyms')") Gyms
+						li
+							a(href = "/pune/yoga"  onclick = "categorySearch('yoga')") Yoga
+						li
+							a(href = "/pune/zumba"  onclick = "categorySearch('zumba')") Zumba
+						li
+							a(href = "/pune/fitness-studios"  onclick = "categorySearch('fitness studios')") Fitness Studios
+						li
+							a(href = "/pune/cross-functional-training"  onclick = "categorySearch('cross functional training')") Cross/Functional Training
+						li
+							a(href = "/pune/crossfit"  onclick = "categorySearch('crossfit')") Crossfit
+						li
+							a(href = "/pune/dance"  onclick = "categorySearch('dance')") Dance
+						li
+							a(href = "/pune/mma-and-kick-boxing"  onclick = "categorySearch('mma & kick boxing')") MMA & Kick Boxing
+						li
+							a(href = "/pune/aerobics"  onclick = "categorySearch('aerobics')") Aerobics
+						li
+							a(href = "/pune/pilates"  onclick = "categorySearch('pilates')") Pilates
+						li
+							a(href = "/pune/spinning-and-indoor-cycling"  onclick = "categorySearch('spinning')") Spinning
+				if city == 'bangalore'
+					ul
+						li
+							a(href = "/bangalore/gyms"  onclick = "categorySearch('gyms')") Gyms
+						li
+							a(href = "/bangalore/yoga"  onclick = "categorySearch('yoga')") Yoga
+						li
+							a(href = "/bangalore/zumba"  onclick = "categorySearch('zumba')") Zumba
+						li
+							a(href = "/bangalore/crossfit"  onclick = "categorySearch('crossfit')") Crossfit
+						li
+							a(href = "/bangalore/fitness-studios"  onclick = "categorySearch('fitness studios')") Fitness Studios
+						li
+							a(href = "/bangalore/mma-and-kick-boxing"  onclick = "categorySearch('mma and kick boxing')") MMA & Kick Boxing
+						li
+							a(href = "/bangalore/cross-functional-training"  onclick = "categorySearch('crosss functional training')") Cross functional training
+						li
+							a(href = "/bangalore/dance"  onclick = "categorySearch('dance')") Dance
+						li
+							a(href = "/bangalore/pilates"  onclick = "categorySearch('pilates')") Pilates
+						li
+							a(href = "/bangalore/healthy-tiffins"  onclick = "categorySearch('healthy tiffins')") Healthy Tiffins 
+						li
+							a(href = "/bangalore/spinning-and-indoor-cycling"  onclick = "categorySearch('spinning')") Spinning
+				if city == 'delhi' || city == 'gurgaon'
+					ul
+						li
+							a(href = "/#{city}/gyms"  onclick = "categorySearch('gyms')") Gyms
+						li
+							a(href = "/#{city}/yoga"  onclick = "categorySearch('yoga')") Yoga
+						li
+							a(href = "/#{city}/zumba"  onclick = "categorySearch('zumba')") Zumba
+						li
+							a(href = "/#{city}/cross-functional-training"  onclick = "categorySearch('cross functional training')") Cross/Functional Training
+						li
+							a(href = "/#{city}/dance"  onclick = "categorySearch('dance')") Dance
+						li
+							a(href = "/#{city}/crossfit"  onclick = "categorySearch('crossfit')") Crossfit
+						li
+							a(href = "/#{city}/pilates"  onclick = "categorySearch('pilates')") Pilates
+						li
+							a(href = "/#{city}/mma-and-kick-boxing"  onclick = "categorySearch('mma and kick boxing')") MMA & Kick Boxing
+						li
+							a(href = "/#{city}/spinning-and-indoor-cycling"  onclick = "categorySearch('spinning')") Spinning
+						li
+							a(href = "/#{city}/fitness-studios"  onclick = "categorySearch('fitness studios')") Fitness Studios	
