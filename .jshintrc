@@ -1,0 +1,7 @@
+{
+	"predef": ["FB","Messenger","document","window","location","localStorage"],
+	"newcap": false,
+	"globals": {
+		"$": false
+	}
+}
