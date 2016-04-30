@@ -1,0 +1,40 @@
+input:focus::-webkit-input-placeholder {
+    color: transparent;
+}
+
+input:focus:-moz-placeholder {
+    color: transparent;
+}
+
+
+/* FF 4-18 */
+
+input:focus::-moz-placeholder {
+    color: transparent;
+}
+
+
+/* FF 19+ */
+
+input:focus:-ms-input-placeholder {
+    color: transparent;
+}
+
+
+/* IE 10+ */
+
+*:focus {
+    outline: none;
+}
+
+.flow-hidden {
+    overflow: hidden !important;
+}
+
+.flow-hidden-y {
+    overflow-y: hidden !important;
+}
+
+.flow-hidden-x {
+    overflow-x: hidden !important;
+}
