@@ -1,62 +1,66 @@
 {
-  "name": "joyRide",
-  "description": "A website for bike ride booking",
-  "main": "app.js",
-  "authors": [
-    "AkkiParekh <ankit77parekh@gmail.com>"
-  ],
-  "license": "ISC",
-  "homepage": "https://github.com/joyRideMumbai/joyRideWeb.git",
-  "moduleType": [],
-  "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "public/components",
-    "test",
-    "tests"
-  ],
-  "dependencies": {
-    "animate.css": "^3.5.1",
-    "breakpoint-sass": "^2.7.0",
-    "EasyAutocomplete": "latest",
-    "fakeLoader": "fakeloader#*",
-    "waitMe": "https://github.com/vadimsva/waitMe.git",
-    "html5shiv": "3.7.3",
-    "jquery": "^2.2.1",
-    "jquery_lazyload": "https://github.com/fitajay/jquery_lazyload.git#~1.9.7",
-    "magnific-popup": "^1.1.0",
-    "selectize": "^0.12.1",
-    "rateYo": "rateyo#^2.0.1",
-    "jquery.nicescroll": "https://github.com/inuyaksa/jquery.nicescroll.git",
-    "jquery-accordion": "*",
-    "jqPagination.js": "https://github.com/beneverard/jqPagination.git",
-    "jquery-throttle-debounce": "https://github.com/cowboy/jquery-throttle-debounce.git",
-    "readmore-js": "latest",
-    "jquery-storage-api": "jQuery-Storage-API#^1.8.1",
-    "masonry": "^4.0.0",
-    "ScrollToFixed": "^1.0.6",
-    "validetta": "^1.0.1",
-    "Leaflet": "https://github.com/Leaflet/Leaflet.git",
-    "messenger": "^1.5.0",
-    "isotip": "^1.3.0",
-    "pikaday": "https://github.com/dbushell/Pikaday.git#^1.4.0",
-    "lodash": "^4.10.0",
-    "underscore": "^1.8.3",
-    "jquery-ui": "^1.11.4",
-    "social-share-kit": "http://github.com/darklow/social-share-kit.git#^1.0.8",
-    "slidereveal": "^1.1.1",
-    "wow":"https://github.com/matthieua/WOW.git",
-    "html5shiv": "3.7.3",
-    "jquery": "^2.2.1",
-    "jquery_lazyload": "https://github.com/fitajay/jquery_lazyload.git#~1.9.7",
-    "materialize": "latest",
-    "owl.carousel": "^2.0.0-beta.3",
-    "font-awesome": "Font-Awesome#^4.5.0",
-    "jquery-storage-api": "jQuery-Storage-API#^1.8.1"
-  },
-  "resolutions": {
-    "jquery": "^2.2.1"
-  }
+	"name"       : "joyRide",
+	"description": "A website for bike ride booking",
+	"main"       : "app.js",
+	"license"    : "ISC",
+
+	"authors": [
+		"AkkiParekh <ankit77parekh@gmail.com>"
+	],
+
+	"homepage": "https://github.com/joyRideMumbai/joyRideWeb.git",
+
+	"moduleType": [],
+	"private": true,
+
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"public/components",
+		"test",
+		"tests"
+	],
+	
+	"dependencies": {
+		"jquery"			: "^2.2.1",
+		"animate.css"       : "^3.5.1",
+		"breakpoint-sass"	: "^2.7.0",
+		"EasyAutocomplete"	: "latest",
+		"html5shiv"			: "3.7.3",
+		"magnific-popup"	: "^1.1.0",
+		"selectize"			: "^0.12.1",
+		"rateYo"			: "rateyo#^2.0.1",
+		"jquery-accordion"	: "*",
+		"readmore-js"		: "latest",
+		"masonry"			: "^4.0.0",
+		"ScrollToFixed"		: "^1.0.6",
+		"validetta"			: "^1.0.1",
+		"messenger"			: "^1.5.0",
+		"isotip"			: "^1.3.0",
+		"lodash"			: "^4.10.0",
+		"underscore"		: "^1.8.3",
+		"jquery-ui"			: "^1.11.4",
+		"slidereveal"		: "^1.1.1",
+		"materialize"		: "latest",
+		"jquery_lazyload": "https://github.com/fitajay/jquery_lazyload.git#~1.9.7",
+		
+		"owl.carousel": "^2.0.0-beta.3",
+		"font-awesome": "Font-Awesome#^4.5.0",
+
+		"waitMe"				 	: "https://github.com/vadimsva/waitMe.git",
+		"jquery_lazyload"		 	: "https://github.com/fitajay/jquery_lazyload.git#~1.9.7",
+		"jquery.nicescroll"		 	: "https://github.com/inuyaksa/jquery.nicescroll.git",
+		"jqPagination.js"		 	: "https://github.com/beneverard/jqPagination.git",
+		"jquery-throttle-debounce"  : "https://github.com/cowboy/jquery-throttle-debounce.git",
+		"jquery-storage-api"		: "jQuery-Storage-API#^1.8.1",
+		"Leaflet"					: "https://github.com/Leaflet/Leaflet.git",
+		"pikaday"					: "https://github.com/dbushell/Pikaday.git#^1.4.0",
+		"social-share-kit"			: "http://github.com/darklow/social-share-kit.git#^1.0.8",
+		"wow"					    :"https://github.com/matthieua/WOW.git",
+	},
+
+	"resolutions": {
+		"jquery": "^2.2.1"
+	}
 }
