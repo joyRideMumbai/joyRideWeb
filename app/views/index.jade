@@ -1,0 +1,196 @@
+extends layout
+
+block content
+	include header
+	.rideWrapper
+		section.main-slider#main-slider(data-section="home")
+			div.slider-wrapper
+				div.slide
+					.container
+						.row
+							.col.s7.m7.l7
+								h1.white-text.flow-text.bold.wow.fadeInLeft Book a Ride
+								p.flow-text.white-text.wow.fadeInLeft Finding taxis too expensive for your purse or do the frequent onroad traffic annoy you? Your answer is just a few clicks or swipes away with JoyRide.
+								h5.flow-text.white-text.bold.wow.fadeInLeft 
+									a.waves-effect.waves-cyan.white-text Gather Joy With Every Ride !
+							.col.s5.m5.l5
+								img.iphoneApp.image.z-depth-3.responsive-img.wow.fadeInLeft(src="../img/app.png")
+				div.slide
+					.container
+						.row
+							.col.s5.m5.l5
+								img.iphoneApp.image.z-depth-3.responsive-img.wow.fadeInLeft(src="../img/app2.png")
+							.col.s7.m7.l7
+								h1.white-text.flow-text.bold.wow.fadeInLeft Try a Ride
+								p.flow-text.white-text.wow.fadeInLeft JoyRide is Mumbai's personal time-saver. We are an all-in-one convenience service provider: Your driver, your courier, & your personal shopper. You name it, we'll deliver it, instantly! 
+								h5.cyan-text.bold.wow.fadeInLeft
+									a.waves-effect.waves-cyan.white-text Save With Every Ride !
+				div.slide
+					.container
+						.row
+							.col.s7.m7.l7
+								h1.white-text.flow-text.bold.wow.fadeInLeft Get Your Package
+								p.flow-text.white-text.wow.fadeInLeft Got a package and don't know how to send it to your loved ones, who is in another side of city? Don't worry! We provide you one-of-a-kind service that'll solve your problems.
+								h5.cyan-text.bold 
+									a.waves-effect.waves-cyan.white-text.wow.fadeInLeft Deliver your package ontime !
+							.col.s5.m5.l5
+								img.iphoneApp.image.z-depth-3.responsive-img.wow.fadeInRight(src="../img/app3.png")
+		section.about.white#about(data-section="about")
+			.container
+				h1.center-align.teal-text.wow.fadeInUp About Us
+				.small-underline-center-teal
+				.row
+					.col.s12.m6.l6
+						div.about-cards
+							.row
+								.col.s6.m6.l6
+									.card.center-align.white-text.wow.fadeInLeft
+										.card-image
+											span.fa.fa-money.fa-3x
+										.card-content
+											p
+											| Pocket Friendly Rides
+								.col.s6.m6.l6
+									.card.center-align.white-text.wow.fadeInLeft
+										.card-image
+											span.fa.fa-motorcycle.fa-3x
+										.card-content
+											p
+											| Beat traffic and save time
+							.row
+								.col.s6.m6.l6
+									.card.center-align.white-text.wow.fadeInLeft
+										.card-image
+											span.fa.fa-thumbs-up.fa-3x
+										.card-content
+											p
+											| Your Safety is our Motto
+								.col.s6.m6.l6
+									.card.center-align.white-text.wow.fadeInLeft
+										.card-image
+											span.fa.fa-archive.fa-3x
+										.card-content
+											p
+											| Your Delivery is our priority
+					.col.s12.m5.l5.offset-m1.offset-l1
+						h5.flow-text.teal-text.wow.fadeInRight We believe in making your every ride joyfull
+						ul#ourService.wow.fadeInRight.justify
+							li Our app will help you hitch a ride with bike riders who have empty pillion seats.
+							li We are an all-in-one convenience service provider: Your driver, your courier, and your personal shopper. You name it, we'll do it, instantly!
+							li Need a ride right away? Beat traffic and ease of use ?
+							li Our registered riders make sure that you have a safe and smooth ride at a fraction of the cost of a taxi.
+							li Your security and that of your belongings is our priority.
+		section.services.transparent#services(data-section="services")
+			.container
+				h2.white-text.center-align Our sevices
+				.small-underline-center-white
+				.row
+					.col.s12.m4.l4
+						.card.z-depth-3.white-text.wow.fadeInLeft
+							.card-image.center-align
+								span.fa.fa-motorcycle.fa-5x
+							.card-content
+								p No one likes to be held up by traffic! We too know how annoying it would be. That's exactly what lighted our bulbs to come up with a solution: Bike Ride Sharing. Our ultimate goal is to provide you hassle-free, cheaper travel, 24x7. We achieve this by our diligent network of riders, who are reliable, friendly and practically know every shortcut in the city, to take you to your desitnation faster than you can imagine!
+					.col.s12.m4.l4
+						.card.z-depth-3.white-text.wow.fadeInUp
+							.card-image.center-align
+								span.fa.fa-archive.fa-5x
+							.card-content
+								p No one likes to be held up by traffic! We too know how annoying it would be. That's exactly what lighted our bulbs to come up with a solution: Bike Ride Sharing. Our ultimate goal is to provide you hassle-free, cheaper travel, 24x7. We achieve this by our diligent network of riders, who are reliable, friendly and practically know every shortcut in the city, to take you to your desitnation faster than you can imagine!
+					.col.s12.m4.l4
+						.card.z-depth-3.white-text.wow.fadeInRight
+							.card-image.center-align
+								span.fa.fa-motorcycle.fa-5x
+								span.fa.fa-wrench.fa-3x
+							.card-content
+								p Ride at the tap of a button No one likes to be held up by traffic! We too know how annoying it would be. That's exactly what lighted our bulbs to come up with a solution: Bike Ride Sharing. Our ultimate goal is to provide you hassle-free, cheaper travel, 24x7. We achieve this by our diligent network of riders, who are reliable, friendly and practically know every shortcut in the city, to take you to your desitnation faster than you can imagine!
+		section.getApp.white#app(data-section="app")
+			.container
+				h2.teal-text.center-align.wow.fadeInUp Get App
+				.small-underline-center-teal
+				.row
+					.col.s12.m6.l6.center-align.wow.fadeIn
+						img#appDownload.iphoneApp.image.z-depth-3(src="../img/app.png")
+					.col.s12.m6.l6
+						h3.flow-text.teal-text.wow.fadeInRight Choose your native platform and get started!
+						a.waves-effect.waves-light.appbtn.teal-text.wow.fadeInRight
+							i.fa.fa-apple.fa-3x.left
+							span Download for
+								br
+								span.flow-text.bold Apple iOS
+						a.waves-effect.waves-light.appbtn.teal-text.wow.fadeInRight
+							i.fa.fa-android.fa-3x.left
+							span Download for
+								br
+								span.flow-text.bold Android
+		section.support.transparent#support(data-section="support")
+			.container
+				h2.white-text.center-align.wow.fadeInUp Support
+				.small-underline-center-white
+				p.white-text.center-align.flow-text.wow.fadeInUp For more info and support, contact us
+				.row
+					.col.s12.m8.l8
+						.row#form.wow.fadeInLeft
+							.input-field.col.s12.m12.l12
+								input#name.validate(type='text')
+								label(for='name') Your Name
+							.input-field.col.s12.m12.l12
+								input#email.validate(type='email')
+								label(for='email') Your Email
+							.input-field.col.s12
+								textarea#message.materialize-textarea
+								label(for='message') Your Message
+							.input-field.col.s12.right-align
+								a.btn.btn-flat.waves-effect.waves-teal.transparent.white-text Send
+					.col.s12.m3.l3.offset-m1.offset-l1
+						table.footerContact.wow.fadeInRight
+							tbody
+								tr
+									td
+										span.btn.white.btn-floating.waves-effect.waves-light.btn-large
+											i.fa.del-fa.fa-map-marker.teal-text
+									td.white-text Mira-road (East), Mumbai - 401107. 
+								tr
+									td
+										span.btn.white.btn-floating.waves-effect.waves-light.btn-large
+											i.fa.del-fa.fa-envelope.teal-text
+									td.white-text
+										a.white-text(href='mailto:support@joyride.com') support@joyride.com
+								tr
+									td
+										span.btn.white.btn-floating.waves-effect.waves-light.btn-large
+											i.fa.del-fa.fa-phone.teal-text
+									td.white-text +91 9920353532
+		section.contact.white#contact(data-section="contact")
+			.container
+				h2.teal-text.center-align Contact Us
+				.small-underline-center-teal
+				.row
+					.col.s12.m12.l12
+					.container
+						.row
+							.col.m12.s12.l12.align-center
+								h3.flow-text.center-align.wow.fadeInUp We hear you! Always...
+						.row
+							.col.m12.s12.l12.center-align
+								p.flow-text.center-align.wow.fadeInUp
+									| Share your experience with us. Your feedback really means a lot to us.
+								br
+								| Just drop a mail to us at  
+								a.teal-text.flow-text.bold.wow.fadeInUp#mail(href='mailto:info@joyride.com', target='_top') info@joyride.com
+		section.footer
+			.container
+				.row.no-margin
+					.col.s12.m12.l12.center-align
+						img.wow.fadeInRight(src='../img/LogoTrans.png')
+				.row.no-margin
+					.col.s12.m4.l4.left-align
+						p.white-text.wow.fadeInLeft 
+							| Copyright © 2016 
+					.col.s12.m4.l4.center-align
+						p.white-text.wow.fadeInBottom
+							| Theme Design by 
+							a.white-text.bold(href="#") Ankit Parekh
+					.col.s12.m4.l4.right-align
+						p.white-text.wow.fadeInRight
+							a.white-text(href='') Terms of Use

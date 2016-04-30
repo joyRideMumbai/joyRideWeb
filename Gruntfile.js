@@ -25,7 +25,8 @@ module.exports = function (grunt) {
 			dist: {
 				files: {
 					'public/css/master.css': 'public/css/master.scss',
-					'public/css/static.css': 'public/css/static.scss'
+					'public/css/static.css': 'public/css/static.scss',
+					'public/css/ride.css': 'public/css/ride.scss'
 				}
 			}
 		},
@@ -63,6 +64,7 @@ module.exports = function (grunt) {
 				src: [
 					'public/js/afterinit.js',
 					'public/js/app.js',
+					'public/js/ride.js',
 					'public/js/auth/auth.js',
 					'public/js/triggs/trig.js',
 					'public/js/msgs/msgs.js',
@@ -102,7 +104,7 @@ module.exports = function (grunt) {
 				dest: 'public/csslib1/distcss.css'
 			},
 			cssassets: {
-				src: ['public/css/style.css'],
+				src: ['public/css/ride.css'],
 				dest: 'public/csslib2/assestscss.css'
 			}
 		},

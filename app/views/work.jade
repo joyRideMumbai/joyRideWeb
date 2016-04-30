@@ -1,0 +1,85 @@
+extends layout
+block content
+	link(rel='stylesheet', href='/css/ride.css', type='text/css')
+	link(href="http://fonts.googleapis.com/css?family=Pacifico", rel="stylesheet",type="text/css")
+	include rideHeader
+	.rideWrapper.ride
+		section.book.transparent#book1
+			.container
+				h1.center-align.white-text.wow.fadeInUp Book A Ride
+				.small-underline-center-white
+				.row
+					.col.s12.m4.l4
+						a(href="/Book/RideLogin")
+							div.card.wow.fadeInLeft.z-depth-2
+								div.card-content.center-align
+									h3.flow-text.center-align.white-text.wow.fadeInUp Book Online
+									p.flow-text.center-align.white-text Enjoy the ride by just filling your information and book online. 
+									a.btn.btn-floating.btn-large.transparent.z-depth-3
+										i.fa.fa-file-o
+					.col.s12.m4.l4.center-align
+						div.card.wow.fadeInUp.z-depth-2
+							div.card-content
+								h3.flow-text.center-align.white-text.wow.fadeInUp Download App
+								p.flow-text.center-align.white-text Download the app as per your native platform and enjoy the ride.
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-download
+					.col.s12.m4.l4.center-align
+						div.card.wow.fadeInRight.z-depth-2
+							div.card-content
+								h3.flow-text.center-align.white-text.wow.fadeInUp Call us
+								p.flow-text.center-align.white-text Simply make a call or give a miss call to our team and book your ride.
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-phone
+		section.book.white#book2
+			.container
+				h1.center-align.teal-text.wow.fadeInUp Deliver Your Parcel 
+				.small-underline-center-teal
+				.row
+					.col.s12.m4.l4.center-align
+						.card.wow.fadeInLeft.z-depth-2
+							.card-content
+								h3.flow-text.center-align.teal-text.wow.fadeInUp Book Online
+								p.flow-text.center-align.teal-text Deliver your Parcel by just filling your delivery information online. 
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-download.teal-text
+					.col.s12.m4.l4.center-align
+						.card.wow.fadeInUp.z-depth-2
+							.card-content
+								h3.flow-text.center-align.teal-text.wow.fadeInUp Download App
+								p.flow-text.center-align.teal-text Download the app as per your native platform and get your product delivered.
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-download.teal-text							
+					.col.s12.m4.l4.center-align
+						.card.wow.fadeInRight.z-depth-2
+							.card-content
+								h3.flow-text.center-align.teal-text.wow.fadeInUp Call us
+								p.flow-text.center-align.teal-text Simply make a call or give a miss call to our team and get your procduct delivered.
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-phone.teal-text
+		section.book.transparent#book3
+			.container
+				h1.center-align.white-text.wow.fadeInUp Get a Meachanic
+				.small-underline-center-white
+				.row
+					.col.s12.m4.l4
+						div.card.wow.fadeInLeft.z-depth-2
+							div.card-content.center-align
+								h3.flow-text.center-align.white-text.wow.fadeInUp Book Online
+								p.flow-text.center-align.white-text Get a Mechanic wherever and whenever you want by booking online. 
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-file-o
+					.col.s12.m4.l4.center-align
+						div.card.wow.fadeInUp.z-depth-2
+							div.card-content
+								h3.flow-text.center-align.white-text.wow.fadeInUp Download App
+								p.flow-text.center-align.white-text Download the app as per your native platform and get a mechanic at your location.
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-download
+					.col.s12.m4.l4.center-align
+						div.card.wow.fadeInRight.z-depth-2
+							div.card-content
+								h3.flow-text.center-align.white-text.wow.fadeInUp Call us
+								p.flow-text.center-align.white-text Simply make a call or give a miss call to get mechanic at your desired location.
+								a.btn.btn-floating.btn-large.transparent.z-depth-3
+									i.fa.fa-phone

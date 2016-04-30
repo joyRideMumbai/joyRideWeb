@@ -1,0 +1,80 @@
+extends layout
+
+block content
+	.LoginWrapper
+		section.transparent.serviceLoginContainer
+			.container
+				.row
+					.col.s12.m12.l12
+						.card-panel.transparent.z-depth-4
+							.row
+								.col.s12.m6.l6
+									h5.loginTxt.center-align.white-text.wow.fadeInUp Login
+									.small-underline-center-white
+									form.Login.col.s12#form1
+										.row.no-margin
+											.col.s12
+										.row
+											.input-field.col.s12
+												input#first_name.validate(type='text')
+												label(for='first_name') Username / Email Address
+										.row.no-margin
+											.input-field.col.s12
+												input#password.validate(type='password')
+												label(for='password') Password
+										.row.no-margin
+											.col.s12.right-align
+												span.showForgot.white-text Forgot Password ?
+										.row
+											.col.s12.left-align
+												a.btn.transparent.white-text(href="") Login
+									form.SignUp.col.s12#form2.hide
+										.row.no-margin
+											.col.s12
+										.row
+											.input-field.col.s12
+												input#first_name.validate(type='text')
+												label(for='first_name') Username
+										.row
+											.input-field.col.s12
+												input#email.validate(type='text')
+												label(for='email') Email Address
+										.row
+											.input-field.col.s12
+												input#phone.validate(type='text')
+												label(for='phone') Contact No
+										.row
+											.col.s12.center-align
+												a.social-btn.btn.transparent.white-text(href="") Sign In
+										h5.beforeAfterWhite
+											| Or With
+										p.center-align
+											a.social-btn.btn.waves-effect.waves-light.white Facebook
+											a.social-btn.btn.waves-effect.waves-light.white Google
+									form.Forgot.col.s12#form3.hide
+										.row.no-margin
+											.col.s12
+										.row
+											.input-field.col.s12
+												input#first_name.validate(type='text')
+												label(for='first_name') Username/Email
+										.row
+											.input-field.col.s12
+												input#forgotpass.validate(type='password')
+												label(for='forgotpass') Enter New Password
+										.row.no-margin
+											.input-field.col.s12
+												input#confirmpass.validate(type='password')
+												label(for='confirm') Confirm Password
+										.row
+											.col.s12.left-align
+												a.social-btn.btn.transparent.white-text(href="") Reset
+								.col.s12.m6.l6.center-align
+									h4.teal-text.wow.fadeInUp 
+										if bookType == "Ride"
+											| Book A Ride
+									h5
+										span.my-text.fa.fa-motorcycle.fa-5x
+									p.teal-text.dontTxt
+										| Don't Have an Account ?  
+									span.showSignup.btn Sign Up

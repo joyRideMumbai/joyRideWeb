@@ -1,25 +1,30 @@
 var express = require('express'),
-	cors = require('cors'),
-	router = express.Router(),
-	request = require('request');
-var jwt = require('jsonwebtoken');
-var crypto = require('crypto');
-var moment = require('moment');
-async = require('async');
-chalk = require('chalk');
-lodash = require('lodash');
+	cors    = require('cors'),
+	request = require('request'),
+	jwt 	= require('jsonwebtoken'),
+	crypto  = require('crypto'),
+	moment  = require('moment'),
+	async 	= require('async'),
+	chalk 	= require('chalk'),
+	lodash 	= require('lodash');
 
+var router  = express.Router();
+	
 module.exports = function(app) {
 	app.use(cors());
 	app.use('/', router);
 };
 
 // This is the very homepage
-router.get('/', function(req, res) {
+router.get('/', function(req, res, next) {
+  res.render('index', { title: 'JoyRide' });
+});
+
+/*router.get('/', function(req, res) {
 	var ses = req.app.getsessionid(res, req);
 	var ref = req.app.getreferer(res, req, ses);
 	req.app.getcurrentcity(res, req, function(city) {
-		console.log(city.slug);
+		
 		var path = 'https://a1.fitternity.com/homev3/' + city.slug;
 		var footerpath = 'https://a1.fitternity.com/footer/' + city.slug;
 		async.parallel({
@@ -69,7 +74,7 @@ router.get('/', function(req, res) {
 			});
 	});
 });
-
+*/
 
 // 404 Page
 router.get('/404', function(req, res) {

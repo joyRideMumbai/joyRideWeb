@@ -1,11 +1,9 @@
 doctype html
-html(lang='en')
+html
 	head
-		include sections/header
+		title= title
+		meta(name="viewport",content="width=device-width,,initial-scale=1.0")
+		include csslibs
 	body
-		include sections/topbar
 		block content
-		include sections/authpops
-		include sections/callback
-	include libs/jslibs
-	include sections/footer
+		include jslibs

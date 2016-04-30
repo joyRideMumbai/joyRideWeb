@@ -1,5 +1,47 @@
 //Import the required mixins
-
 @import url(https://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900);
 @import "css3-mixins.scss";
 @import "../components/breakpoint-sass/stylesheets/breakpoint";
+
+//colors
+$white       : #fff;
+$white_1     : rgba(255, 255, 255, 0.18);
+$white_2     : rgba(255, 255, 255, 0.2);
+$teal        : teal;
+$black_1     : rgba(0, 0, 0, 0.16);
+$black_2     : rgba(0, 0, 0, 0.12);
+$green       : #4db6ac;
+$lightTeal   : #50a3a2;
+$transparent :transparent;
+
+//fonts
+$font_0: Pacifico;
+$font_1: cursive;
+
+input:focus::-webkit-input-placeholder {
+    color: $transparent;
+}
+input:focus:-moz-placeholder {
+    color: $transparent;
+}
+/* FF 4-18 */
+input:focus::-moz-placeholder {
+    color: $transparent;
+}
+/* FF 19+ */
+input:focus:-ms-input-placeholder {
+    color: $transparent;
+}
+/* IE 10+ */
+*:focus {
+    outline: none;
+}
+.flow-hidden {
+    overflow: hidden !important;
+}
+.flow-hidden-y {
+    overflow-y: hidden !important;
+}
+.flow-hidden-x {
+    overflow-x: hidden !important;
+}

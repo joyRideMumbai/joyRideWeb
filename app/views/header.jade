@@ -1,0 +1,43 @@
+header
+	nav.transparent
+		.nav-wrapper.container
+			a.brand-logo(href='#!') 
+				.logo.img
+			a.button-collapse(href='#home', data-activates='mobile-menu')
+				i.fa.fa-bars.fa-lg
+			ul.right.hide-on-med-and-down
+				li(data-section="home")
+					a(href='#main-slider') Home
+				li(data-section="about")
+					a(href='#about') About Us
+				li(data-section="service")
+					a(href='#services') Services
+				li(data-section="app")
+					a(href='#app')
+						span.fa.fa-mobile.fa-lg
+						|  Get JoyRide
+				li(data-section="support")
+					a(href='#support') Support
+				li(data-section="contact")
+					a(href='#contact') Contact Us
+				li.book(data-section="book")
+					a(href='/Book') Book A Ride
+			ul#mobile-menu.side-nav
+				li.teal
+					a(href='#')
+						span.white-text.mobile-logo-text.flow-text JOYRIDE 
+						img.reponsive-img.mobile-logo(src="../img/LogoTrans.png")
+				li
+					a(href='#') Home
+				li
+					a(href='/Book') Book A Ride
+				li
+					a(href='#') About Us
+				li
+					a(href='#') Services
+				li
+					a(href='#') Get JoyRide
+				li
+					a(href='#') Support
+				li
+					a(href='#') Contact Us

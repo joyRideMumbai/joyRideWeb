@@ -1,17 +1,6 @@
-extend layout
+extends layout
+
 block content
-	.mui-container
-		.error
-			.mui-row
-				.mui-col-md-6.mui-col-xs-12.message.mui--align-middle
-					.mui--text-display4 Sorry! 
-					.mui--text-display2 Something went wrong!.
-					.mui--text-display1 The team is being notified.
-					br
-					a.mui-btn.mui-btn--primary(href="/") Go To Homepage
-					if message != undefined
-						pre #{message}
-						pre #{error}
-						pre #{error.status}
-				.mui-col-md-6.mui-col-xs-12.graphic
-					img(src="/img/error.png",width="100%;")
+  h1= message
+  h2= error.status
+  pre #{error.stack}
