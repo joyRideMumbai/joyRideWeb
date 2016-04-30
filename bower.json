@@ -56,7 +56,7 @@
 		"Leaflet"					: "https://github.com/Leaflet/Leaflet.git",
 		"pikaday"					: "https://github.com/dbushell/Pikaday.git#^1.4.0",
 		"social-share-kit"			: "http://github.com/darklow/social-share-kit.git#^1.0.8",
-		"wow"					    : "https://github.com/matthieua/WOW.git",
+		"wow"					    : "https://github.com/matthieua/WOW.git"
 	},
 
 	"resolutions": {
